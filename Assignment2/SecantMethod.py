@@ -14,18 +14,11 @@ def function(x):
 
 def secant(x0,x1,e,N):
     print('\n\n*** SECANT METHOD IMPLEMENTATION ***')
-    step = 1
-
     while True:
-        # if function(x0) == function(x1):
-        #     print('Divide by zero error!')
-        #     break
         eps = 0.00001
         x2 = x0 - (x1-x0)*function(x0)/( function(x1) - function(x0) ) 
-        # print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' % (step, x2, function(x2)))
         x0 = x1
         x1 = x2
-        step = step + 1
         
         if abs(x0 - x1) < eps * abs(x0):
             print('Exit')
