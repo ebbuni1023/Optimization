@@ -7,6 +7,7 @@ import math
 
 # let g(x) = (2x-1)^2 + 4(4-1024x)^4
 def function(x):
+    # can change the function
     f = ( 2*x -1 )**2 + 4 * ( 4 - 1024*x )**4
     return f
 
@@ -22,8 +23,8 @@ def secant(x0,x1,eps):
             print("\n abs(x0 - x1) < eps * abs(x0) is false so it's done!")
             break
         
-    print('\n Required root is: %0.8f \n' % secantMethod )
-
+    print('\n Root of g(x): %0.8f \n' % secantMethod)
+    print(' Value of g: %0.8f \n' % function(secantMethod))
 # Initialization
 x0 = 0
 x1 = 1
